@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <packageId>H2Forge.MoreGolems</packageId>
+    <name>More Golems</name>
+    <author>H2Forge</author>
+    <description>
+		TODO: Add description
+    </description>
+    <modDependencies>
+        <li>
+            <packageId>Torann.ARimworldOfMagic</packageId>
+            <displayName>A RimWorld of Magic</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/1201382956</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+	<loadAfter>
+		<li>Torann.ARimworldOfMagic</li>
+	</loadAfter>
+    <supportedVersions>
+        <li>1.4</li>
+    </supportedVersions>
+</ModMetaData>
