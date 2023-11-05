@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<TorannMagic.TMDefs.TM_GolemDef Name="H2F_StrawGolem">
+		<defName>H2F_Golem_Straw</defName>
+		<golemDef>H2F_StrawGolem</golemDef>
+		<golemKindDef>H2F_StrawGolemK</golemKindDef>
+		<golemWorkstationDef>H2F_StrawGolem_Workstation</golemWorkstationDef>
+		<golemFramePath>Golems/Straw/Straw_Workstation_Frame</golemFramePath>
+		<activationTicks>300</activationTicks>
+		<processorEvaluationTicks>200</processorEvaluationTicks>
+		<needs>
+		  <li>TM_GolemEnergy</li>
+		</needs>
+		<hediffs>
+		  <li>TM_GolemHD</li>
+		</hediffs>
+		<upgrades>
+		</upgrades>			
+	</TorannMagic.TMDefs.TM_GolemDef>
+</Defs>

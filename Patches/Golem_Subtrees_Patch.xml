@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThinkTreeDef[defName="TM_Golem_BehaviorCore"]/thinkRoot/subNodes</xpath>
+		<value>
+			<li Class="ThinkNode_ConditionalPawnKind">
+				<pawnKind>H2F_StrawGolemK</pawnKind>
+				<subNodes>
+					<li Class="ThinkNode_Subtree">
+						<treeDef>H2F_Golem_StrawBehavior</treeDef>
+						<leaveJoinableLordIfIssuesJob>true</leaveJoinableLordIfIssuesJob>
+					</li>
+				</subNodes>
+			</li>
+		</value>
+	</Operation>
+</Patch>

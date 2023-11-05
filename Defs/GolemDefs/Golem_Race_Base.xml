@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- STRAW GOLEM -->
+  <ThingDef ParentName="TM_Golem_Base">
+    <defName>H2F_StrawGolem</defName>
+    <label>straw golem</label>
+    <description>A golem woven and wickered from reeds.</description>
+	<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+    <statBases>
+      <MarketValue>1800</MarketValue>
+      <MoveSpeed>2.8</MoveSpeed>
+      <ComfyTemperatureMin>-200</ComfyTemperatureMin>
+      <ComfyTemperatureMax>500</ComfyTemperatureMax>
+	  <ArmorRating_Blunt>0.68</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.73</ArmorRating_Sharp>
+	  <ArmorRating_Heat>0.65</ArmorRating_Heat>
+      <PsychicSensitivity>1</PsychicSensitivity>
+	  <MeatAmount>0</MeatAmount>
+    </statBases>
+    <tools>      
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>18.0</power>
+        <cooldownTime>2.1</cooldownTime>
+        <linkedBodyPartsGroup>Golem_Arms</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+	  <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>18.0</power>
+        <cooldownTime>2.1</cooldownTime>
+        <linkedBodyPartsGroup>Golem_Arms</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain>TM_GolemMain</thinkTreeMain>
+      <thinkTreeConstant>TM_GolemConstant</thinkTreeConstant>      
+      <makesFootprints>true</makesFootprints>
+      <body>H2F_StrawGolem</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>2</baseHealthScale>
+      <foodType>None</foodType>
+	  <bloodDef>Filth_Hair</bloodDef>
+	  <intelligence>ToolUser</intelligence>
+	  <fleshType>TM_Golem_Flesh</fleshType>
+	  <useMeatFrom>Human</useMeatFrom>
+	  <trainability>None</trainability>
+      <lifeStageAges>
+        <li>
+          <def>H2F_StrawGolemLS</def>
+          <minAge>0</minAge>
+		  <soundWounded>Pawn_Bear_Injured</soundWounded>
+          <soundDeath>Pawn_Bear_Death</soundDeath>
+          <soundCall>Pawn_Bear_Call</soundCall>
+          <soundAngry>Pawn_Bear_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <specialShadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>
+    </race>
+	<comps>
+	  <li Class="TorannMagic.Golems.CompProperties_Golem">
+	  </li>
+    </comps>
+	<ingredient>
+      <mergeCompatibilityTags>
+        <li>HumanMeat</li>
+      </mergeCompatibilityTags>
+    </ingredient>
+	<butcherProducts>
+	  <Hay>70</Hay>
+	  <RawMagicyte>20</RawMagicyte>
+	  <Leather_Light>10</Leather_Light>
+    </butcherProducts>
+  </ThingDef>
+  
+  <PawnKindDef Name="H2F_StrawGolemKind" ParentName="TM_GolemKind_Base">
+  	<defName>H2F_StrawGolemK</defName>
+    <race>H2F_StrawGolem</race>
+    <label>straw-golem</label>
+    <combatPower>200</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Golems/Straw/Straw</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.6, 0.3)</volume>
+			<offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+  <LifeStageDef>
+    <defName>H2F_StrawGolemLS</defName>
+    <label>straw golem</label>
+	<voxPitch>.5</voxPitch>
+	<bodySizeFactor>1.0</bodySizeFactor>
+	<healthScaleFactor>1</healthScaleFactor>
+	<marketValueFactor>1</marketValueFactor>
+    <statFactors>
+      <MoveSpeed>1.0</MoveSpeed>
+    </statFactors>
+  </LifeStageDef>
+  
+  <LifeStageDef>
+    <defName>H2F_StrawGolemLS1</defName>
+    <label>straw golem</label>
+	<voxPitch>.4</voxPitch>
+	<bodySizeFactor>1.1</bodySizeFactor>
+	<healthScaleFactor>1.2</healthScaleFactor>
+	<marketValueFactor>1.2</marketValueFactor>
+    <statFactors>
+      <MoveSpeed>1.2</MoveSpeed>
+    </statFactors>
+  </LifeStageDef>
+  <LifeStageDef>
+    <defName>H2F_StrawGolemLS2</defName>
+    <label>straw golem</label>
+	<voxPitch>.35</voxPitch>
+	<bodySizeFactor>1.2</bodySizeFactor>
+	<healthScaleFactor>1.4</healthScaleFactor>
+	<marketValueFactor>1.35</marketValueFactor>
+    <statFactors>
+      <MoveSpeed>1.3</MoveSpeed>
+    </statFactors>
+  </LifeStageDef>
+  <LifeStageDef>
+    <defName>H2F_StrawGolemLS3</defName>
+    <label>straw golem</label>
+	<voxPitch>.3</voxPitch>
+	<bodySizeFactor>1.3</bodySizeFactor>
+	<healthScaleFactor>1.5</healthScaleFactor>
+	<marketValueFactor>1.5</marketValueFactor>
+    <statFactors>
+      <MoveSpeed>1.4</MoveSpeed>
+    </statFactors>
+  </LifeStageDef>
+  
+</Defs>

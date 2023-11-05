@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName="DoBillsGolemBuilding"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>H2F_StrawGolem_Workstation</li>
+		</value>
+	</Operation>
+</Patch>
